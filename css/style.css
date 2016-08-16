@@ -1,0 +1,35 @@
+
+
+.red{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: red;
+    border: 2px solid black;
+}
+
+@keyframes example {
+    0% {background-color: red;}
+    5% {background-color: yellow;}
+    99% {background-color: green;}
+
+}
+
+.green{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: 2px solid black;
+
+    background-color: green;
+    animation-name: example;
+    animation-duration: 3s;
+
+}
+
+.glyphicon{
+    font-size: 100px;
+    position: relative;
+}

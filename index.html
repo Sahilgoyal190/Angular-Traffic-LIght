@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Angualar Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+</head>
+<body ng-app="cityRoads">
+
+
+
+<div ng-controller="MainController">
+    <div class="container-fluid">
+        <div class="row text-center">
+            <h3>Traffic Light Control</h3>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Direction</div>
+            <div class="panel-body"><b>North-South</b>: {{NS | uppercase}} </div>
+            <div class="panel-body"><b>East-West</b>: {{EW | uppercase}}</div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-2 col-md-offset-4">
+                <div class="row"><b>North</b></div>
+                <div stop-light-directive loc="Light1"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-2">
+                <div class="row"><b>West</b></div>
+                <div stop-light-directive loc="Light2"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="glyphicon glyphicon-move"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="row"><b>East</b></div>
+                <div stop-light-directive loc="Light2"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-4">
+                <div class="row"><b>South</b></div>
+                <div stop-light-directive loc="Light1"></div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-2">
+                <div stop-light-switch-directive press="button()"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
+
+
